@@ -1,0 +1,42 @@
+object fmxUsers: TfmxUsers
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Position.X = 8.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 170.000000000000000000
+    Size.Height = 146.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Layout3D1: TLayout3D
+      Height = 4.000000000000000000
+      Width = 5.000000000000000000
+    end
+    object Label1: TLabel
+      Position.X = 1.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Label1'
+      TabOrder = 2
+    end
+    object Button1: TButton
+      Position.X = 41.000000000000000000
+      Position.Y = 105.000000000000000000
+      Size.Width = 129.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Button1'
+      OnClick = Button1Click
+    end
+  end
+end

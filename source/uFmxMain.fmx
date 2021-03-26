@@ -1,4 +1,4 @@
-object Form4: TForm4
+object fmxMain: TfmxMain
   Left = 0
   Top = 0
   Caption = 'Form4'
@@ -8,4 +8,93 @@ object Form4: TForm4
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 0
+    TabOrder = 3
+    TabPosition = Top
+    Sizes = (
+      640s
+      404s
+      640s
+      404s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 69.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem1'
+      OnMouseUp = TabItem1MouseUp
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+      object Panel1: TPanel
+        Position.X = 32.000000000000000000
+        Position.Y = 70.000000000000000000
+        Size.Width = 425.000000000000000000
+        Size.Height = 283.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 69.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'TabItem2'
+      OnMouseUp = TabItem2MouseUp
+      ExplicitSize.cx = 69.000000000000000000
+      ExplicitSize.cy = 26.000000000000000000
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 232
+    Top = 168
+    object mi_control_panel: TMenuItem
+      Text = 'Control Panel'
+    end
+    object mi_setings: TMenuItem
+      Text = 'Setings'
+      object mi_users: TMenuItem
+        Locked = True
+        Text = 'Users'
+        OnClick = mi_usersClick
+      end
+    end
+    object mi_queries: TMenuItem
+      Text = 'Queries'
+    end
+    object mi_exit: TMenuItem
+      ShortCut = 32883
+      Text = 'Exit'
+      OnClick = mi_exitClick
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+  object MultiView1: TMultiView
+    NavigationPaneOptions.CollapsedWidth = 49.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
 end

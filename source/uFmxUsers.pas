@@ -9,7 +9,7 @@ uses
   FMX.Controls3D, FMX.Layers3D, FMX.Layouts;
 
 type
-  TfmxUsers = class(TMyLibraryFormBase)
+  TfmxUsers = class(TMyLibrary_FormBase)
     Layout1: TLayout;
     Layout3D1: TLayout3D;
     Label1: TLabel;

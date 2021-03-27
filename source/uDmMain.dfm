@@ -1,0 +1,2 @@
+inherited DmMain: TDmMain
+end

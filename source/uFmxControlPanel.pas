@@ -8,7 +8,7 @@ uses
   FMX.Controls.Presentation, FMX.StdCtrls,  MyLibrary.FormUtil;
 
 type
-  TfmxControlPanel = class(TMyLibraryFormBase)
+  TfmxControlPanel = class(TMyLibrary_FormBase)
     Label1: TLabel;
   private
     { Private declarations }

@@ -7,6 +7,8 @@ object fmxMain: TfmxMain
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  OnKeyUp = FormKeyUp
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Client
@@ -42,6 +44,15 @@ object fmxMain: TfmxMain
         Size.Height = 283.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
+      end
+      object SpeedButton1: TSpeedButton
+        Position.X = 160.000000000000000000
+        Position.Y = 14.000000000000000000
+        Size.Width = 145.000000000000000000
+        Size.Height = 35.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'searcheditbutton'
+        Text = 'SpeedButton1'
       end
     end
     object TabItem2: TTabItem

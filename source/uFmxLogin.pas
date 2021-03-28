@@ -9,6 +9,9 @@ uses
 
 type
   TFmxLogin = class(TMyLibrary_FormLogin)
+    Button1: TButton;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,5 +26,17 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TFmxLogin.Button1Click(Sender: TObject);
+begin
+  inherited;
+  Hide;
+end;
+
+procedure TFmxLogin.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  Action := TCloseAction.caFree;
+end;
 
 end.

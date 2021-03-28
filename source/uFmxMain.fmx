@@ -7,8 +7,8 @@ object fmxMain: TfmxMain
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  OnActivate = FormActivate
   OnKeyUp = FormKeyUp
+  OnPaint = FormPaint
   DesignerMasterStyle = 0
   object TabControl1: TTabControl
     Align = Client
@@ -37,14 +37,6 @@ object fmxMain: TfmxMain
       OnMouseUp = TabItem1MouseUp
       ExplicitSize.cx = 69.000000000000000000
       ExplicitSize.cy = 26.000000000000000000
-      object Panel1: TPanel
-        Position.X = 32.000000000000000000
-        Position.Y = 70.000000000000000000
-        Size.Width = 425.000000000000000000
-        Size.Height = 283.000000000000000000
-        Size.PlatformDefault = False
-        TabOrder = 0
-      end
       object SpeedButton1: TSpeedButton
         Position.X = 160.000000000000000000
         Position.Y = 14.000000000000000000
@@ -107,5 +99,12 @@ object fmxMain: TfmxMain
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
+  end
+  object ti_login_control: TTimer
+    Enabled = False
+    Interval = 200
+    OnTimer = ti_login_controlTimer
+    Left = 520
+    Top = 50
   end
 end

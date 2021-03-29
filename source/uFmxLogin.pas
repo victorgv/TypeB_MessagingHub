@@ -30,7 +30,7 @@ implementation
 procedure TFmxLogin.Button1Click(Sender: TObject);
 begin
   inherited;
-  Hide;
+  close;
 end;
 
 procedure TFmxLogin.FormClose(Sender: TObject; var Action: TCloseAction);

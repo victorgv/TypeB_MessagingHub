@@ -198,22 +198,18 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="..\..\source\uFmxMain.pas">
+        <DCCReference Include="..\..\source\TypeB_MessagingHub_MANAGER\uFmxMain.pas">
             <Form>fmxMain</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\..\source\uFmxUsers.pas">
+        <DCCReference Include="..\..\source\TypeB_MessagingHub_MANAGER\uFmxUsers.pas">
             <Form>fmxUsers</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\..\source\uFmxControlPanel.pas">
+        <DCCReference Include="..\..\source\TypeB_MessagingHub_MANAGER\uFmxControlPanel.pas">
             <Form>fmxControlPanel</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.FormUtil.pas"/>
-        <DCCReference Include="..\..\source\uFmxLogin.pas">
+        <DCCReference Include="..\..\source\TypeB_MessagingHub_MANAGER\uFmxLogin.pas">
             <Form>FmxLogin</Form>
-            <FormType>fmx</FormType>
         </DCCReference>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.DataModuleMain.pas">
             <Form>MyLibrary_DataModuleMain</Form>
@@ -224,9 +220,8 @@
             <Form>MyLibrary_FormLogin</Form>
             <FormType>fmx</FormType>
         </DCCReference>
-        <DCCReference Include="..\..\source\uDmMain.pas">
+        <DCCReference Include="..\..\source\TypeB_MessagingHub_MANAGER\uDmMain.pas">
             <Form>DmMain</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.Core.pas"/>

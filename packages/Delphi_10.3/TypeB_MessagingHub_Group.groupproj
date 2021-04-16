@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E50291AE-86CE-4926-A781-8E824BB91580}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="TypeB_MessagingHub_REST_SERVER_Form.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="TypeB_MessagingHub_MANAGER.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TypeB_MessagingHub_REST_SERVER_Form">
+        <MSBuild Projects="TypeB_MessagingHub_REST_SERVER_Form.dproj"/>
+    </Target>
+    <Target Name="TypeB_MessagingHub_REST_SERVER_Form:Clean">
+        <MSBuild Projects="TypeB_MessagingHub_REST_SERVER_Form.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypeB_MessagingHub_REST_SERVER_Form:Make">
+        <MSBuild Projects="TypeB_MessagingHub_REST_SERVER_Form.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TypeB_MessagingHub_MANAGER">
+        <MSBuild Projects="TypeB_MessagingHub_MANAGER.dproj"/>
+    </Target>
+    <Target Name="TypeB_MessagingHub_MANAGER:Clean">
+        <MSBuild Projects="TypeB_MessagingHub_MANAGER.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TypeB_MessagingHub_MANAGER:Make">
+        <MSBuild Projects="TypeB_MessagingHub_MANAGER.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TypeB_MessagingHub_REST_SERVER_Form;TypeB_MessagingHub_MANAGER"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TypeB_MessagingHub_REST_SERVER_Form:Clean;TypeB_MessagingHub_MANAGER:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TypeB_MessagingHub_REST_SERVER_Form:Make;TypeB_MessagingHub_MANAGER:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

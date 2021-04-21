@@ -111,6 +111,7 @@
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\WindowsService\MyLibrary.WindowsServiceBASE.pas"/>
         <DCCReference Include="..\..\source\TypeB_MessagingHub_REST_SERVER\uTServiceRestServer.pas"/>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\FireDAC\MyLibrary.FireDAC_PooledConnection.pas"/>
+        <DCCReference Include="..\..\lib\MyDelphiLibrary\source\DMVCFramework\MyLibrary.DMVCF.AuthenticationHandler.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

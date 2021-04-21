@@ -21,14 +21,7 @@ begin
   DmMain := TDmMain.Create(nil);
   try
     Application.CreateForm(TfmxMain, fmxMain);
-  // Main form
-  //Application.CreateForm(TfmxMain, fmxMain); // Main form
-
     Application.Run;
-
-    //  Application.CreateForm(TFmxLogin, FmxLogin);
-
-      //fmxMain.Show;
   finally
     DmMain.Free;
   end;

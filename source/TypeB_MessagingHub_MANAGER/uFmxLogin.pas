@@ -48,6 +48,13 @@ var
 begin
   inherited;
 
+  {DAME_CLAVE (pública)
+
+  // 02 VERSION
+  // 10 TIMESTAMP
+  // 20 USUARIO
+  // 35 PASSW}
+
   Hash := THashSHA2.Create;
   Hash.Update('Hola * ç ó €');
   ShowMessage(Hash.HashAsString);

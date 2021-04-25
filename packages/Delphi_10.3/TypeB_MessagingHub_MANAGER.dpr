@@ -12,7 +12,9 @@ uses
   MyLibrary.FormLogin in '..\..\lib\MyDelphiLibrary\source\FMX\FormLogin\MyLibrary.FormLogin.pas' {MyLibrary_FormLogin},
   uDmMain in '..\..\source\TypeB_MessagingHub_MANAGER\uDmMain.pas' {DmMain: TDataModule},
   MyLibrary.Core in '..\..\lib\MyDelphiLibrary\source\MyLibrary.Core.pas',
-  MyLibrary.Session in '..\..\lib\MyDelphiLibrary\source\MyLibrary.Session.pas';
+  MyLibrary.Session in '..\..\lib\MyDelphiLibrary\source\MyLibrary.Session.pas',
+  MyLibrary.DMVCF.Connection in '..\..\lib\MyDelphiLibrary\source\DMVCFramework\Client\MyLibrary.DMVCF.Connection.pas',
+  MyLibrary.UserLanguageStrings in '..\..\lib\MyDelphiLibrary\source\MyLibrary.UserLanguageStrings.pas';
 
 {$R *.res}
 
@@ -21,7 +23,7 @@ begin
   DmMain := TDmMain.Create(nil);
   try
     Application.CreateForm(TfmxMain, fmxMain);
-    Application.Run;
+  Application.Run;
   finally
     DmMain.Free;
   end;

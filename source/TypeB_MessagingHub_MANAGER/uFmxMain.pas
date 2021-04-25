@@ -112,7 +112,7 @@ begin
   if not fLoginOpened then
   begin
     fLoginOpened := true;
-    if NOT Assigned(MyLibrary_MASTER.Session) then MyLibrary_MASTER.DoLogin(TFmxLogin);
+    if NOT Assigned(MyLibrary_.Session) then MyLibrary_.DoLogin(TFmxLogin);
   end;
 
 end;

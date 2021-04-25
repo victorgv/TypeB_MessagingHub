@@ -226,6 +226,8 @@
         </DCCReference>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.Core.pas"/>
         <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.Session.pas"/>
+        <DCCReference Include="..\..\lib\MyDelphiLibrary\source\DMVCFramework\Client\MyLibrary.DMVCF.Connection.pas"/>
+        <DCCReference Include="..\..\lib\MyDelphiLibrary\source\MyLibrary.UserLanguageStrings.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -411,6 +413,12 @@
                 <DeployFile LocalName="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Configuration="Debug" Class="Android_LauncherIcon96">
                     <Platform Name="Android64">
                         <RemoteName>ic_launcher.png</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Debug\TypeB_MessagingHub_MANAGER.rsm" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win64">
+                        <RemoteName>TypeB_MessagingHub_MANAGER.rsm</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>

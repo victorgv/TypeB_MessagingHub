@@ -3,7 +3,7 @@ unit uDmMain;
 interface
 
 uses
-  System.SysUtils, System.Classes, MyLibrary.DataModuleMain;
+  System.SysUtils, System.Classes, MyLibrary.DataModuleMain, FMX.Types;
 
 type
   TDmMain = class(TMyLibrary_DataModuleMain)

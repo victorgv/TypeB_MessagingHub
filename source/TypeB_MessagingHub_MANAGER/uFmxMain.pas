@@ -19,10 +19,19 @@ type
     TabItem1: TTabItem;
     TabItem2: TTabItem;
     mi_control_panel: TMenuItem;
-    Layout1: TLayout;
-    SpeedButton1: TSpeedButton;
     MultiView1: TMultiView;
     ti_login_control: TTimer;
+    tb_main: TToolBar;
+    Layout1: TLayout;
+    bt_open_multiview: TButton;
+    bt_doBack: TButton;
+    ly_header: TLayout;
+    ly_body: TLayout;
+    ly_foot: TLayout;
+    bt_exit: TButton;
+    BT_Control_Panel: TButton;
+    BT_Queries: TButton;
+    BT_Settings: TButton;
     procedure mi_exitClick(Sender: TObject);
     procedure mi_usersClick(Sender: TObject);
     procedure TabItem2MouseUp(Sender: TObject; Button: TMouseButton;
@@ -33,6 +42,7 @@ type
       Shift: TShiftState);
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure ti_login_controlTimer(Sender: TObject);
+    procedure bt_exitClick(Sender: TObject);
   private
     { Private declarations }
     fLoginOpened: boolean;
@@ -55,6 +65,11 @@ uses uFmxUsers, uFmxControlPanel, uFmxLogin;
 
 
 { TfmxMain }
+
+procedure TfmxMain.bt_exitClick(Sender: TObject);
+begin
+  Application.Terminate;
+end;
 
 constructor TfmxMain.create(AOwner: TComponent);
 begin

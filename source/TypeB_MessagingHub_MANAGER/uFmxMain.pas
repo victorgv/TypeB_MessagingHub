@@ -9,6 +9,9 @@ uses
   MyLibrary.FormUtil, FMX.Layouts, MyLibrary.Core;
 
 type
+  TButtonHack = type TButton;
+
+type
   TfmxMain = class(TMyLibrary_MainFormBase_Tabbed)
     MainMenu1: TMainMenu;
     mi_setings: TMenuItem;
@@ -19,7 +22,7 @@ type
     TabItem1: TTabItem;
     TabItem2: TTabItem;
     mi_control_panel: TMenuItem;
-    MultiView1: TMultiView;
+    mv_main: TMultiView;
     ti_login_control: TTimer;
     tb_main: TToolBar;
     Layout1: TLayout;
@@ -31,7 +34,9 @@ type
     bt_exit: TButton;
     BT_Control_Panel: TButton;
     BT_Queries: TButton;
-    BT_Settings: TButton;
+    BT_Users: TButton;
+    Layout2: TLayout;
+    BT_Channels: TButton;
     procedure mi_exitClick(Sender: TObject);
     procedure mi_usersClick(Sender: TObject);
     procedure TabItem2MouseUp(Sender: TObject; Button: TMouseButton;
@@ -43,6 +48,9 @@ type
     procedure FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
     procedure ti_login_controlTimer(Sender: TObject);
     procedure bt_exitClick(Sender: TObject);
+    procedure BT_UsersClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
     fLoginOpened: boolean;
@@ -50,7 +58,8 @@ type
     function getTabControl: TTabControl; override;
   public
     { Public declarations }
-    constructor create(AOwner: TComponent); override;
+
+
 
   end;
 
@@ -71,20 +80,31 @@ begin
   Application.Terminate;
 end;
 
-constructor TfmxMain.create(AOwner: TComponent);
+procedure TfmxMain.BT_UsersClick(Sender: TObject);
 begin
-  inherited;
+  RunFormAsTab(TfmxUsers, false);
+  if mv_main.IsShowed then mv_main.HideMaster;
 end;
 
-procedure TfmxMain.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
-  Shift: TShiftState);
+
+procedure TfmxMain.FormCreate(Sender: TObject);
+begin
+  mv_main.Mode := TMultiViewMode.Drawer;
+  if mv_main.IsShowed then mv_main.HideMaster;
+end;
+
+procedure TfmxMain.FormDestroy(Sender: TObject);
+begin
+  CloseAllTabs;
+end;
+
+procedure TfmxMain.FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char; Shift: TShiftState);
 begin
   if Key = vkHardwareBack then // Key =  vkEscape then //
     Key := 0;
 end;
 
-procedure TfmxMain.FormPaint(Sender: TObject; Canvas: TCanvas;
-  const ARect: TRectF);
+procedure TfmxMain.FormPaint(Sender: TObject; Canvas: TCanvas; const ARect: TRectF);
 begin
   inherited;
   ti_login_control.Enabled := not fLoginOpened;

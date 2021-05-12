@@ -7,6 +7,8 @@ object fmxMain: TfmxMain
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   OnKeyUp = FormKeyUp
   OnPaint = FormPaint
   DesignerMasterStyle = 0
@@ -123,14 +125,13 @@ object fmxMain: TfmxMain
       TabOrder = 0
     end
   end
-  object MultiView1: TMultiView
+  object mv_main: TMultiView
     MasterButton = bt_open_multiview
-    Mode = Drawer
+    Mode = Custom
     NavigationPaneOptions.CollapsedWidth = 250.000000000000000000
     Size.Width = 250.000000000000000000
     Size.Height = 440.000000000000000000
     Size.PlatformDefault = False
-    Visible = False
     TabOrder = 1
     object ly_header: TLayout
       Align = Top
@@ -165,15 +166,34 @@ object fmxMain: TfmxMain
         TabOrder = 1
         Text = 'BT_Queries'
       end
-      object BT_Settings: TButton
+      object BT_Users: TButton
         Align = Top
-        Position.Y = 44.000000000000000000
+        Position.Y = 65.000000000000000000
         Size.Width = 250.000000000000000000
         Size.Height = 22.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'toolbutton'
+        TabOrder = 4
+        Text = 'Users'
+        OnClick = BT_UsersClick
+      end
+      object Layout2: TLayout
+        Align = Top
+        Position.Y = 44.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
         TabOrder = 2
-        Text = 'BT_Settings'
+      end
+      object BT_Channels: TButton
+        Align = Top
+        Position.Y = 87.000000000000000000
+        Size.Width = 250.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        StyleLookup = 'toolbutton'
+        TabOrder = 3
+        Text = 'Channels'
       end
     end
     object ly_foot: TLayout

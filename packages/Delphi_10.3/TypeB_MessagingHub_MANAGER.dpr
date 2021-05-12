@@ -23,7 +23,7 @@ begin
   DmMain := TDmMain.Create(nil);
   try
     Application.CreateForm(TfmxMain, fmxMain);
-  Application.Run;
+    Application.Run;
   finally
     DmMain.Free;
   end;

@@ -12,6 +12,7 @@ Type
     protected
       procedure validateInstanceIsLive; Override;  // Check our Thread/Threads/Action/Actions, etc... are living
       function getServiceCode: String; Override;  // Unique code to indentify your service
+      procedure Initializations; virtual;
     public
       procedure ServiceExecute; virtual;
       procedure ServiceStart; virtual;
@@ -21,6 +22,8 @@ Type
   end;
 
 implementation
+
+uses MyLibrary.FireDAC_PooledConnection;
 
 { TServiceRestServer }
 
@@ -41,6 +44,12 @@ end;
 function TServiceRestServer.getServiceCode: String;
 begin
   result := 'TypeB_MessagingHub_REST_SERVER';
+end;
+
+procedure TServiceRestServer.Initializations;
+begin
+  inherited;
+  TMyLibrary_doCreate_Pooled_Connection('localhost', 'db_messaginghub', 'con_messaginghub', 'victor', 5432, 15);
 end;
 
 procedure TServiceRestServer.ServiceExecute;
